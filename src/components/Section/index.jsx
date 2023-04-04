@@ -1,9 +1,13 @@
-import { Container } from "./styles"
+import { Link } from "../Link"
+import { Container, Wrapper } from "./styles"
 
 export function Section({ title, children }) {
   return (
     <Container>
-      <h1>{title}</h1>
+      <Wrapper>
+        <h2>{title}</h2>
+        <Link />
+      </Wrapper>
       {children}
     </Container>
   )

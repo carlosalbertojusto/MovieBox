@@ -1,9 +1,11 @@
 import { Container } from "./styles"
+import { FiChevronRight } from "react-icons/fi"
 
 export function Link() {
   return (
     <Container>
-      <h1>Hello World</h1>
+      <a href="#">See more</a>
+      <FiChevronRight />
     </Container>
   )
 }
