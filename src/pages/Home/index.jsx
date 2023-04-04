@@ -5,16 +5,24 @@ import {
   PaginationBox,
   Wrapper,
 } from "./styles"
-import { Navigation } from "../../components/Navigation"
-import { Description } from "../../components/Description"
-import { Card } from "../../components/Card"
+
+import {
+  Card,
+  Description,
+  Input,
+  Link,
+  Navigation,
+  Section,
+} from "../../components"
+
 import StrangerThings from "../../assets/strangerthings.png"
-import { Section } from "../../components/Section"
+
 export function Home() {
   return (
     <Container>
       <Header>
         <Navigation />
+
         <Wrapper>
           <DescriptionBox>
             <Description
@@ -27,6 +35,7 @@ export function Home() {
               }}
             />
           </DescriptionBox>
+
           <PaginationBox>
             <div className="line"></div>
             <span>1</span>
@@ -35,8 +44,11 @@ export function Home() {
             <span>4</span>
             <span>5</span>
           </PaginationBox>
+
         </Wrapper>
+
       </Header>
+
       <Section title="Featured Movie">
         <Card
           data={{
@@ -51,6 +63,7 @@ export function Home() {
           }}
         />
       </Section>
+
     </Container>
   )
 }

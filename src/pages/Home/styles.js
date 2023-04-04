@@ -7,10 +7,10 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   gap: 7rem;
-  
+
   overflow-y: overlay;
   &::-webkit-scrollbar {
-    width: 4px;
+    width: 0.4rem;
   }
   &::-webkit-scrollbar-track {
     background: none;

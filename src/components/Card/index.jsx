@@ -1,35 +1,35 @@
-import { Container, Description, Image } from "./styles"
+import { Container, Description, ImageContainer } from "./styles"
+
+import { Favorites } from "../Favorites"
+import { Category } from "../Category"
+import { Rating } from "../Rating"
+
 import LogoImdb from "../../assets/imdb.png"
+
 import LogoRottenTomatoes from "../../assets/rottentomatoe.png"
-import { FiHeart } from "react-icons/fi"
+
 export function Card({ data, ...rest }) {
   return (
     <Container {...rest}>
-      <Image>
-        <div className="favorites">
-          <FiHeart />
-        </div>
-        <div className="category">
-          <span>{data.category}</span>
-        </div>
+      <ImageContainer>
+        <Favorites />
+
+        <Category title={data.category} />
+
         <img src={data.image} alt={data.alt} />
-      </Image>
+      </ImageContainer>
+
       <Description>
         <span>{data.releaseInfo}</span>
+
         <h1>{data.title}</h1>
-        <div className="rating">
-          <div>
-            <img src={LogoImdb} alt="Logo do site de avaliações IMDB" />
-            <span>{data.ratingImdb} / 100</span>
-          </div>
-          <div>
-            <img
-              src={LogoRottenTomatoes}
-              alt="Logo do site de avaliações Rotten Tomatoes"
-            />
-            <span>{data.ratingRt}%</span>
-          </div>
-        </div>
+
+        <Rating
+          logoImdb={LogoImdb}
+          logoRt={LogoRottenTomatoes}
+          ratingImdb="86.0"
+          ratingRt="97"
+        />
         <span>{data.genres}</span>
       </Description>
     </Container>
