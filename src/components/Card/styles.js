@@ -29,12 +29,10 @@ export const Description = styled.div`
     color: ${({ theme }) => theme.COLORS.GRAY_400};
   }
 
-  > h1 {
+  h1 {
     font-size: 1.8rem;
     line-height: 2.3rem;
     font-weight: 700;
     color: ${({ theme }) => theme.COLORS.GRAY_900};
   }
-
-  
 `

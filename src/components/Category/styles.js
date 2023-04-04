@@ -15,7 +15,7 @@ export const Container = styled.div`
   border-radius: 1.2rem;
   background: ${({ theme }) => theme.COLORS.GRAY_50};
 
-  > span {
+  span {
     font-size: 1.2rem;
     line-height: 1.6rem;
     font-weight: 700;

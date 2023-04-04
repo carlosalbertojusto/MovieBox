@@ -14,7 +14,7 @@ export const Container = styled.div`
   justify-content: center;
   align-items: center;
 
-  > svg {
+  svg {
     width: 2rem;
     height: 2rem;
     fill: ${({ theme }) => theme.COLORS.GRAY_300};
