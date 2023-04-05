@@ -1,8 +1,9 @@
 import styled from "styled-components"
 
 export const Container = styled.section`
-  width: 100%;
-  margin: 0 auto;
+  max-width: 100%;
+  margin: 0 3.8rem 0 3.4rem;
+
   h2 {
     font-weight: 700;
     font-size: 3.6rem;
