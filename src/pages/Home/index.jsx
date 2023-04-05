@@ -17,7 +17,6 @@ import {
 
 import { images } from "../../assets/index"
 
-
 export function Home() {
   return (
     <Container>
@@ -63,38 +62,38 @@ export function Home() {
         />
         <Card
           data={{
-            title: "Stranger things",
-            ratingImdb: "86.0",
-            ratingRt: "97",
-            category: "Tv series",
-            genres: "Action, Adventure, Horror ",
-            releaseInfo: "USA, 2016 - Current",
-            image: images.ImageStrangerThings,
-            alt: "Banner da série de televisão stranger things",
+            title: "Batman Begins",
+            ratingImdb: "82.0",
+            ratingRt: "70",
+            category: "Movie",
+            genres: "Action, Adventure ",
+            releaseInfo: "USA, 2005",
+            image: images.ImageBatman,
+            alt: "Banner do filme Batman begins",
           }}
         />
         <Card
           data={{
-            title: "Stranger things",
-            ratingImdb: "86.0",
-            ratingRt: "97",
-            category: "Tv series",
-            genres: "Action, Adventure, Horror ",
-            releaseInfo: "USA, 2016 - Current",
-            image: images.ImageStrangerThings,
-            alt: "Banner da série de televisão stranger things",
+            title: "Spider-Man : Into The Spider Verse",
+            ratingImdb: "84.0",
+            ratingRt: "87",
+            category: "Movie",
+            genres: "Animation, Action, Adventure",
+            releaseInfo: "USA, 2018",
+            image: images.ImageSpiderman,
+            alt: "Banner do filme Spider-Man : Into The Spider Verse",
           }}
         />
         <Card
           data={{
-            title: "Stranger things",
-            ratingImdb: "86.0",
-            ratingRt: "97",
-            category: "Tv series",
-            genres: "Action, Adventure, Horror ",
-            releaseInfo: "USA, 2016 - Current",
-            image: images.ImageStrangerThings,
-            alt: "Banner da série de televisão stranger things",
+            title: "Dunkirk",
+            ratingImdb: "78.0",
+            ratingRt: "94",
+            category: "Movie",
+            genres: "Action, Drama, History ",
+            releaseInfo: "USA, 2017",
+            image: images.ImageDunkirk,
+            alt: "Banner do filme Dunkirk",
           }}
         />
       </Section>
