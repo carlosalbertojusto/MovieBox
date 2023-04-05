@@ -15,7 +15,8 @@ import {
   Section,
 } from "../../components"
 
-import StrangerThings from "../../assets/strangerthings.png"
+import { images } from "../../assets/index"
+
 
 export function Home() {
   return (
@@ -44,9 +45,7 @@ export function Home() {
             <span>4</span>
             <span>5</span>
           </PaginationBox>
-
         </Wrapper>
-
       </Header>
 
       <Section title="Featured Movie">
@@ -58,12 +57,47 @@ export function Home() {
             category: "Tv series",
             genres: "Action, Adventure, Horror ",
             releaseInfo: "USA, 2016 - Current",
-            image: StrangerThings,
+            image: images.ImageStrangerThings,
+            alt: "Banner da série de televisão stranger things",
+          }}
+        />
+        <Card
+          data={{
+            title: "Stranger things",
+            ratingImdb: "86.0",
+            ratingRt: "97",
+            category: "Tv series",
+            genres: "Action, Adventure, Horror ",
+            releaseInfo: "USA, 2016 - Current",
+            image: images.ImageStrangerThings,
+            alt: "Banner da série de televisão stranger things",
+          }}
+        />
+        <Card
+          data={{
+            title: "Stranger things",
+            ratingImdb: "86.0",
+            ratingRt: "97",
+            category: "Tv series",
+            genres: "Action, Adventure, Horror ",
+            releaseInfo: "USA, 2016 - Current",
+            image: images.ImageStrangerThings,
+            alt: "Banner da série de televisão stranger things",
+          }}
+        />
+        <Card
+          data={{
+            title: "Stranger things",
+            ratingImdb: "86.0",
+            ratingRt: "97",
+            category: "Tv series",
+            genres: "Action, Adventure, Horror ",
+            releaseInfo: "USA, 2016 - Current",
+            image: images.ImageStrangerThings,
             alt: "Banner da série de televisão stranger things",
           }}
         />
       </Section>
-
     </Container>
   )
 }
