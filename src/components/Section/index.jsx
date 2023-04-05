@@ -1,14 +1,22 @@
 import { Link } from "../Link"
-import { Container, Wrapper } from "./styles"
+import { Container, Title, Movies, MovieList, MovieBox } from "./styles"
+import { FiChevronLeft, FiChevronRight } from "react-icons/fi"
 
 export function Section({ title, children }) {
   return (
     <Container>
-      <Wrapper>
+      <Title>
         <h2>{title}</h2>
         <Link />
-      </Wrapper>
-      {children}
+      </Title>
+
+      <MovieBox>
+        <FiChevronLeft />
+        <MovieList>
+          <Movies>{children}</Movies>
+        </MovieList>
+        <FiChevronRight />
+      </MovieBox>
     </Container>
   )
 }
