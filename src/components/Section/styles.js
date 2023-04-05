@@ -38,7 +38,7 @@ export const MovieBox = styled.div`
   display: flex;
   align-items: center;
 
-  > svg {
+  svg {
     font-size: 4.8rem;
     stroke: ${({ theme }) => theme.COLORS.GRAY_500};
   }
