@@ -59,13 +59,16 @@ export const PaginationBox = styled.div`
     line-height: 1.4rem;
     font-weight: 700;
     color: ${({ theme }) => theme.COLORS.GRAY_400};
+
     &:hover {
       color: ${({ theme }) => theme.COLORS.WHITE};
       cursor: pointer;
     }
+
     &:focus {
       color: ${({ theme }) => theme.COLORS.WHITE};
     }
+
     &:nth-child(4) {
       color: ${({ theme }) => theme.COLORS.WHITE};
     }

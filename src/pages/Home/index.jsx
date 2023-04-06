@@ -53,7 +53,7 @@ export function Home() {
             title: "Stranger things",
             ratingImdb: "86.0",
             ratingRt: "97",
-            category: "Tv series",
+            category: "Tv Series",
             genres: "Action, Adventure, Horror ",
             releaseInfo: "USA, 2016 - Current",
             image: images.ImageStrangerThings,
@@ -65,7 +65,7 @@ export function Home() {
             title: "Batman Begins",
             ratingImdb: "82.0",
             ratingRt: "70",
-            category: "Movie",
+            category: "Movies",
             genres: "Action, Adventure ",
             releaseInfo: "USA, 2005",
             image: images.ImageBatman,
@@ -77,7 +77,7 @@ export function Home() {
             title: "Spider-Man : Into The Spider Verse",
             ratingImdb: "84.0",
             ratingRt: "87",
-            category: "Movie",
+            category: "Movies",
             genres: "Animation, Action, Adventure",
             releaseInfo: "USA, 2018",
             image: images.ImageSpiderman,
@@ -89,11 +89,62 @@ export function Home() {
             title: "Dunkirk",
             ratingImdb: "78.0",
             ratingRt: "94",
-            category: "Movie",
+            category: "Movies",
             genres: "Action, Drama, History ",
             releaseInfo: "USA, 2017",
             image: images.ImageDunkirk,
             alt: "Banner do filme Dunkirk",
+          }}
+        />
+      </Section>
+
+      <Section title="New Arrival">
+        <Card
+          data={{
+            title: "Dune",
+            ratingImdb: "84.0",
+            ratingRt: "75",
+            category: "Movies",
+            genres: "Action, Adventure, Drama ",
+            releaseInfo: "USA, 2021",
+            image: images.ImageDune,
+            alt: "Banner do filme Dune",
+          }}
+        />
+        <Card
+          data={{
+            title: "No Time To Die",
+            ratingImdb: "76.0",
+            ratingRt: "68",
+            category: "Movies",
+            genres: "Action, Adventure, Thriller ",
+            releaseInfo: "USA, 2021",
+            image: images.ImageNoTimeToDie,
+            alt: "Banner do filme 007: No Time To Die",
+          }}
+        />
+        <Card
+          data={{
+            title: "Shang-Chi and the Legend of the Ten Rings",
+            ratingImdb: "79.0",
+            ratingRt: "71",
+            category: "Movies",
+            genres: "Action, Action, Fantasy",
+            releaseInfo: "USA, 2021",
+            image: images.ImageShangchi,
+            alt: "Banner do filme Shang-Chi and the Legend of the Ten Rings",
+          }}
+        />
+        <Card
+          data={{
+            title: "Don't Breathe 2",
+            ratingImdb: "61.0",
+            ratingRt: "46",
+            category: "Movies",
+            genres: "Action, Drama, Horror ",
+            releaseInfo: "USA, 2017",
+            image: images.ImageDontBreathe,
+            alt: "Banner do filme Don't Breathe 2",
           }}
         />
       </Section>
