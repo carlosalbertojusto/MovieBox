@@ -27,8 +27,8 @@ export function Card({ data, ...rest }) {
         <Rating
           logoImdb={LogoImdb}
           logoRt={LogoRottenTomatoes}
-          ratingImdb="86.0"
-          ratingRt="97"
+          ratingImdb={data.ratingImdb}
+          ratingRt={data.ratingRt}
         />
         <span>{data.genres}</span>
       </Description>

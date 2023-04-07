@@ -9,10 +9,9 @@ import {
 import {
   Card,
   Description,
-  Input,
-  Link,
   Navigation,
   Section,
+  VideoCard
 } from "../../components"
 
 import { images } from "../../assets/index"
@@ -145,6 +144,27 @@ export function Home() {
             releaseInfo: "USA, 2017",
             image: images.ImageDontBreathe,
             alt: "Banner do filme Don't Breathe 2",
+          }}
+        />
+      </Section>
+
+      <Section title="Exclusive Videos" isTrailerList>
+        <VideoCard
+          data={{
+            title: "Lamb (2021) Trailer",
+            image: images.ImageLamb,
+          }}
+        />
+        <VideoCard
+          data={{
+            title: "The Suicide Squad : John Cena Interview",
+            image: images.ImageSuicideSquad,
+          }}
+        />
+        <VideoCard
+          data={{
+            title: "Will there be a new era of horror movie?",
+            image: images.ImageWillThereBe,
           }}
         />
       </Section>
