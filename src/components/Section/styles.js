@@ -25,7 +25,7 @@ export const Title = styled.div`
 export const Movies = styled.div`
   display: flex;
   width: 100%;
-  gap: 8rem;
+  gap: ${({isTrailerList}) => (isTrailerList ? `4.5rem` : `8rem`)};
 `
 
 export const MovieList = styled.div`

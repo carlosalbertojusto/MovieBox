@@ -18,7 +18,6 @@ export const Container = styled.div`
     width: 2rem;
     height: 2rem;
     fill: ${({ theme }) => theme.COLORS.GRAY_300};
-    stroke: transparent;
-    outline: transparent;
+    stroke: ${({ theme }) => theme.COLORS.GRAY_300} !important;
   }
 `

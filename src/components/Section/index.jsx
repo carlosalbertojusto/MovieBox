@@ -2,7 +2,7 @@ import { Link } from "../Link"
 import { Container, Title, Movies, MovieList, MovieBox } from "./styles"
 import { FiChevronLeft, FiChevronRight } from "react-icons/fi"
 
-export function Section({ title, children }) {
+export function Section({ title, children, isTrailerList = false }) {
   return (
     <Container>
       <Title>
@@ -13,7 +13,7 @@ export function Section({ title, children }) {
       <MovieBox>
         <FiChevronLeft />
         <MovieList>
-          <Movies>{children}</Movies>
+          <Movies isTrailerList={isTrailerList}>{children}</Movies>
         </MovieList>
         <FiChevronRight />
       </MovieBox>
