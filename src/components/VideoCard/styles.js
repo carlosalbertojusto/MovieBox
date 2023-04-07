@@ -7,6 +7,13 @@ export const Container = styled.div`
   flex-direction: column;
   align-items: flex-start;
   gap: 1.2rem;
+
+  h1 {
+    font-weight: 700;
+    font-size: 1.8rem;
+    line-height: 2.3rem;
+    color: ${({ theme }) => theme.COLORS.GRAY_900};
+  }
 `
 export const ImageContainer = styled.div`
   position: relative;
@@ -23,15 +30,5 @@ export const Play = styled.div`
   svg {
     stroke: ${({ theme }) => theme.COLORS.WHITE};
     stroke-width: 1;
-  }
-`
-
-export const Title = styled.div`
-  width: 100%;
-  h1 {
-    font-weight: 700;
-    font-size: 1.8rem;
-    line-height: 2.3rem;
-    color: ${({ theme }) => theme.COLORS.GRAY_900};
   }
 `

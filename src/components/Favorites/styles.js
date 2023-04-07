@@ -15,10 +15,10 @@ export const Container = styled.div`
   justify-content: center;
   align-items: center;
 
-  svg {
+  #favorite {
     width: 2rem;
     height: 2rem;
     fill: ${({ theme }) => theme.COLORS.GRAY_300};
-    stroke: ${({ theme }) => theme.COLORS.GRAY_300} !important;
+    stroke: ${({ theme }) => theme.COLORS.GRAY_300};
   }
 `
