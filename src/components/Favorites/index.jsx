@@ -1,9 +1,9 @@
 import { Container } from "./styles"
 import { FiHeart } from "react-icons/fi"
 
-export function Favorites() {
+export function Favorites({ isArtist = false }) {
   return (
-    <Container>
+    <Container isArtist={isArtist}>
       <FiHeart />
     </Container>
   )

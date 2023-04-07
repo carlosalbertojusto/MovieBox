@@ -11,10 +11,12 @@ import {
   Description,
   Navigation,
   Section,
-  VideoCard
+  VideoCard,
+  Footer
 } from "../../components"
 
 import { images } from "../../assets/index"
+
 
 export function Home() {
   return (
@@ -168,6 +170,39 @@ export function Home() {
           }}
         />
       </Section>
+
+      <Section title="Featured Casts">
+        <Card
+          data={{
+            title: "Keanu Reeves",
+            image: images.ImageKeanu,
+            artist: true,
+          }}
+        />
+        <Card
+          data={{
+            title: "Ryan Reynolds",
+            image: images.ImageRyan,
+            artist: true,
+          }}
+        />
+        <Card
+          data={{
+            title: "Timothée Chalamet",
+            image: images.ImageThimothee,
+            artist: true,
+          }}
+        />
+        <Card
+          data={{
+            title: "Chloë Grace Moretz",
+            image: images.ImageChloe,
+            artist: true,
+          }}
+        />
+      </Section>
+      
+      <Footer/>
     </Container>
   )
 }

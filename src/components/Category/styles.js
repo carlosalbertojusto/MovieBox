@@ -14,6 +14,7 @@ export const Container = styled.div`
 
   border-radius: 1.2rem;
   background: ${({ theme }) => theme.COLORS.GRAY_50};
+  opacity: ${({ isArtist }) => (isArtist ? 0 : 1)};
 
   span {
     font-size: 1.2rem;

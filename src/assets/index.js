@@ -16,6 +16,7 @@ import ImageWillThereBe from "./willtherebe.png"
 import ImageShangchi from "./shangchi.png"
 import ImageSpiderman from "./Spiderman.png"
 import ImageSuicideSquad from "./suicidesquad.png"
+import ImageThimothee from "./Timothee.png"
 
 export const images = {
   ImageBatman,
@@ -36,4 +37,5 @@ export const images = {
   ImageShangchi,
   ImageSpiderman,
   ImageSuicideSquad,
+  ImageThimothee,
 }

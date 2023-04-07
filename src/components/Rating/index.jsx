@@ -1,8 +1,8 @@
 import { Container, Wrapper } from "./styles"
 
-export function Rating({ logoImdb, ratingImdb, logoRt, ratingRt }) {
+export function Rating({ logoImdb, ratingImdb, logoRt, ratingRt, isArtist = false }) {
   return (
-    <Container>
+    <Container isArtist={isArtist}>
       <Wrapper>
         <img src={logoImdb} alt="Logo do site de avaliações IMDB" />
         <span>{ratingImdb} / 100</span>

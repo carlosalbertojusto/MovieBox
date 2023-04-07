@@ -7,7 +7,6 @@ export const Container = styled.div`
   flex-direction: column;
   align-items: flex-start;
   gap: 1.2rem;
-
 `
 
 export const ImageContainer = styled.div`
@@ -22,7 +21,7 @@ export const Description = styled.div`
   gap: 1.2rem;
   width: 25rem;
   height: 11rem;
-
+  
   span {
     font-size: 1.2rem;
     line-height: 1.6rem;
