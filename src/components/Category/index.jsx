@@ -1,8 +1,8 @@
 import { Container } from "./styles"
 
-export function Category({ title, ...rest }) {
+export function Category({ title, isArtist = false, ...rest }) {
   return (
-    <Container {...rest}>
+    <Container isArtist={isArtist} {...rest}>
       <span>{title}</span>
     </Container>
   )

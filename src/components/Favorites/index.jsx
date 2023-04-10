@@ -1,10 +1,10 @@
 import { Container } from "./styles"
 import { FiHeart } from "react-icons/fi"
 
-export function Favorites() {
+export function Favorites({ isArtist = false }) {
   return (
-    <Container>
-      <FiHeart />
+    <Container isArtist={isArtist}>
+      <FiHeart id="favorite"/>
     </Container>
   )
 }

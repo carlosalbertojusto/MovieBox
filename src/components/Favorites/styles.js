@@ -7,6 +7,7 @@ export const Container = styled.div`
   width: 3rem;
   height: 2.9rem;
   background: ${({ theme }) => theme.COLORS.GRAY_50};
+  opacity: ${({ isArtist }) => (isArtist ? 0 : 1)};
   border-radius: 50rem;
   backdrop-filter: blur(1px);
 
@@ -14,10 +15,10 @@ export const Container = styled.div`
   justify-content: center;
   align-items: center;
 
-  svg {
+  #favorite {
     width: 2rem;
     height: 2rem;
     fill: ${({ theme }) => theme.COLORS.GRAY_300};
-    stroke: ${({ theme }) => theme.COLORS.GRAY_300} !important;
+    stroke: ${({ theme }) => theme.COLORS.GRAY_300};
   }
 `
