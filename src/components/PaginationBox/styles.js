@@ -1,44 +1,6 @@
 import styled from "styled-components"
 
 export const Container = styled.div`
-  width: 100%;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  gap: 7rem;
-
-  overflow-y: overlay;
-  &::-webkit-scrollbar {
-    width: 0.4rem;
-  }
-  &::-webkit-scrollbar-track {
-    background: none;
-  }
-
-  &::-webkit-scrollbar-thumb {
-    background-color: ${({ theme }) => theme.COLORS.GRAY_400};
-    border-radius: 1rem;
-  }
-`
-
-export const Wrapper = styled.div`
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-`
-
-export const DescriptionBox = styled.div`
-  width: 40.5rem;
-  height: 28.5rem;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 1.6rem;
-  margin: 7.8rem 9.8rem;
-`
-
-export const PaginationBox = styled.div`
   position: relative;
   width: 3.6rem;
   height: 11rem;
@@ -49,10 +11,14 @@ export const PaginationBox = styled.div`
   align-items: center;
   justify-content: center;
 
-  > a {
+  > button {
+    border: none;
+    background: transparent;
+
     font-size: 1.2rem;
     line-height: 1.4rem;
     font-weight: 700;
+
     color: ${({ theme }) => theme.COLORS.GRAY_400};
 
     &:hover {

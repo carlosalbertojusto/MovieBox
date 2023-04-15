@@ -1,55 +1,78 @@
-import {
-  Container,
-  Header,
-  DescriptionBox,
-  PaginationBox,
-  Wrapper,
-} from "./styles"
+import { Container, Wrapper } from "./styles"
 
 import {
   Card,
-  Description,
-  Navigation,
+  Header,
   Section,
   VideoCard,
   Footer,
+  MoviesDescription,
+  PaginationBox,
 } from "../../components"
+
 import {
   content,
   featuredCasts,
   movies,
   newArrivals,
+  headerMovies,
+  imagesMovies,
 } from "../../components/VideoCard/content"
+import { useState } from "react"
 
 export function Home() {
+  let [pagination, setPagination] = useState(2)
+  let [imageMovie, setImageMovie] = useState()
+
+  function handlePagination(e) {
+    imagesMovies.map((item) => {
+      let image = item.image
+      let id = item.id
+
+      if (pagination == id) {
+        imageMovie = image
+        return imageMovie
+      }
+      console.log({ image, id, imageMovie })
+    })
+    console.log(pagination)
+  }
+
   return (
     <Container>
-      <Header>
-        <Navigation />
+      <Header
+        image={imageMovie}
+        onClick={(e) => handlePagination()}
+        data={{
+          title: imageMovie.title,
+          ratingImdb: imageMovie.ratingImdb,
+          ratingRt: imageMovie.ratingRt,
+          description: imageMovie.description,
+          image: imageMovie.image,
+          alt: imageMovie.alt,
+        }}
+        onChange={(event) => setPagination(event.target.value)}
+      />
 
-        <Wrapper>
-          <DescriptionBox>
-            <Description
+      {/* {headerMovies.map((item) => (
+          <Wrapper key={item.id}>
+            <MoviesDescription
               data={{
-                title: "John Wick 3 : Parabellum",
-                ratingImdb: "86.0",
-                ratingRt: "97",
-                description:
-                  "John Wick is on the run after killing a member of the international assassins' guild, and with a $14 million price tag on his head, he is the target of hit men and women everywhere.",
+                title: item.title,
+                ratingImdb: item.ratingImdb,
+                ratingRt: item.ratingRt,
+                description: item.description,
+                image: item.image,
+                alt: item.alt,
               }}
             />
-          </DescriptionBox>
 
-          <PaginationBox>
-            <div className="line"></div>
-            <span>1</span>
-            <span>2</span>
-            <span>3</span>
-            <span>4</span>
-            <span>5</span>
-          </PaginationBox>
-        </Wrapper>
-      </Header>
+            <PaginationBox
+              onClick={(e) => handleHeaderImages(e.target.value)}
+            />
+          </Wrapper>
+          
+        ))} */}
 
       <Section title="Featured Movie">
         {movies.map((item) => (

@@ -29,12 +29,13 @@ export const Movies = styled.div`
 `
 
 export const MovieList = styled.div`
+  max-width: 124rem;
+  overflow: scroll;
   display: flex;
   align-items: center;
 `
 
 export const MovieBox = styled.div`
-  width: 100%;
   display: flex;
   align-items: center;
 
