@@ -1,55 +1,64 @@
-import {
-  Container,
-  Header,
-  DescriptionBox,
-  PaginationBox,
-  Wrapper,
-} from "./styles"
+import { Container } from "./styles"
 
-import {
-  Card,
-  Description,
-  Navigation,
-  Section,
-  VideoCard,
-  Footer,
-} from "../../components"
+import { Card, Header, Section, VideoCard, Footer } from "../../components"
+
 import {
   content,
   featuredCasts,
   movies,
   newArrivals,
+  headerMovies,
 } from "../../components/VideoCard/content"
 
+import { useState, useEffect } from "react"
+
 export function Home() {
+  const [pagination, setPagination] = useState(1)
+  const [imageMovie, setImageMovie] = useState("")
+
+  const [titleMovie, setTitleMovie] = useState("")
+  const [ratingImdb, setratingImdb] = useState("")
+  const [ratingRt, setRatingRt] = useState("")
+  const [description, setDescription] = useState("")
+  const [alt, setAlt] = useState("")
+
+  function handleHeaderMovies() {
+    if (pagination <= 5) {
+      headerMovies.map((item) => {
+        const { title, alt, description, id, image, ratingImdb, ratingRt } =
+          item
+
+        if (pagination === id) {
+          setTitleMovie(title)
+          setratingImdb(ratingImdb)
+          setRatingRt(ratingRt)
+          setDescription(description)
+          setAlt(alt)
+          setImageMovie(image)
+        }
+        setPagination(pagination + 1)
+      })
+    } else setPagination(1)
+  }
+
+  useEffect(() => {
+    handleHeaderMovies()
+  }, [])
+
   return (
     <Container>
-      <Header>
-        <Navigation />
-
-        <Wrapper>
-          <DescriptionBox>
-            <Description
-              data={{
-                title: "John Wick 3 : Parabellum",
-                ratingImdb: "86.0",
-                ratingRt: "97",
-                description:
-                  "John Wick is on the run after killing a member of the international assassins' guild, and with a $14 million price tag on his head, he is the target of hit men and women everywhere.",
-              }}
-            />
-          </DescriptionBox>
-
-          <PaginationBox>
-            <div className="line"></div>
-            <span>1</span>
-            <span>2</span>
-            <span>3</span>
-            <span>4</span>
-            <span>5</span>
-          </PaginationBox>
-        </Wrapper>
-      </Header>
+      <Header
+        image={imageMovie}
+        onClick={handleHeaderMovies}
+        data={{
+          title: titleMovie,
+          ratingImdb,
+          ratingRt,
+          description,
+          image: imageMovie,
+          alt: alt,
+        }}
+      />
 
       <Section title="Featured Movie">
         {movies.map((item) => (
@@ -68,7 +77,6 @@ export function Home() {
           />
         ))}
       </Section>
-
       <Section title="New Arrival">
         {newArrivals.map((item) => (
           <Card
@@ -86,7 +94,6 @@ export function Home() {
           />
         ))}
       </Section>
-
       <Section title="Exclusive Videos" isTrailerList>
         {content.map((item) => (
           <VideoCard
@@ -95,7 +102,6 @@ export function Home() {
           />
         ))}
       </Section>
-
       <Section title="Featured Casts">
         {featuredCasts.map((item) => (
           <Card
@@ -108,7 +114,6 @@ export function Home() {
           />
         ))}
       </Section>
-
       <Footer />
     </Container>
   )

@@ -6,7 +6,7 @@ export function VideoCard({ data, ...rest }) {
     <Container>
       <ImageContainer>
         <Play>
-          <FiPlayCircle />
+          <FiPlayCircle id="play"/>
         </Play>
         <img src={data.image} alt={data.alt} />
       </ImageContainer> 

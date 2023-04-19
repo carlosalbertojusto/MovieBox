@@ -17,6 +17,10 @@ import ImageShangchi from "./shangchi.png"
 import ImageSpiderman from "./Spiderman.png"
 import ImageSuicideSquad from "./suicidesquad.png"
 import ImageThimothee from "./Timothee.png"
+import ImageBlackWidow from "./blackWidow.png"
+import ImageMatrix from "./matrix.png"
+import ImageRedNotice from "./rednotice.png"
+import ImageNoWayHome from "./spidermanNoWayHome.jpg"
 
 export const images = {
   ImageBatman,
@@ -38,4 +42,8 @@ export const images = {
   ImageSpiderman,
   ImageSuicideSquad,
   ImageThimothee,
+  ImageNoWayHome,
+  ImageBlackWidow,
+  ImageMatrix,
+  ImageRedNotice
 }

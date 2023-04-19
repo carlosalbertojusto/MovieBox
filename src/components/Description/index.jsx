@@ -2,6 +2,7 @@ import { Container } from "./styles"
 import LogoImdb from "../../assets/imdb.png"
 import LogoRottenTomatoes from "../../assets/rottentomatoe.png"
 import { IoPlayCircle } from "react-icons/io5"
+
 export function Description({ data, ...rest }) {
   return (
     <Container {...rest}>
