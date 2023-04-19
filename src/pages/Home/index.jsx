@@ -1,14 +1,6 @@
-import { Container, Wrapper } from "./styles"
+import { Container } from "./styles"
 
-import {
-  Card,
-  Header,
-  Section,
-  VideoCard,
-  Footer,
-  MoviesDescription,
-  PaginationBox,
-} from "../../components"
+import { Card, Header, Section, VideoCard, Footer } from "../../components"
 
 import {
   content,
@@ -16,63 +8,57 @@ import {
   movies,
   newArrivals,
   headerMovies,
-  imagesMovies,
 } from "../../components/VideoCard/content"
-import { useState } from "react"
+
+import { useState, useEffect } from "react"
 
 export function Home() {
-  let [pagination, setPagination] = useState(2)
-  let [imageMovie, setImageMovie] = useState()
+  const [pagination, setPagination] = useState(1)
+  const [imageMovie, setImageMovie] = useState("")
 
-  function handlePagination(e) {
-    imagesMovies.map((item) => {
-      let image = item.image
-      let id = item.id
+  const [titleMovie, setTitleMovie] = useState("")
+  const [ratingImdb, setratingImdb] = useState("")
+  const [ratingRt, setRatingRt] = useState("")
+  const [description, setDescription] = useState("")
+  const [alt, setAlt] = useState("")
 
-      if (pagination == id) {
-        imageMovie = image
-        return imageMovie
-      }
-      console.log({ image, id, imageMovie })
-    })
-    console.log(pagination)
+  function handleHeaderMovies() {
+    if (pagination <= 5) {
+      headerMovies.map((item) => {
+        const { title, alt, description, id, image, ratingImdb, ratingRt } =
+          item
+
+        if (pagination === id) {
+          setTitleMovie(title)
+          setratingImdb(ratingImdb)
+          setRatingRt(ratingRt)
+          setDescription(description)
+          setAlt(alt)
+          setImageMovie(image)
+        }
+        setPagination(pagination + 1)
+      })
+    } else setPagination(1)
   }
+
+  useEffect(() => {
+    handleHeaderMovies()
+  }, [])
 
   return (
     <Container>
       <Header
         image={imageMovie}
-        onClick={(e) => handlePagination()}
+        onClick={handleHeaderMovies}
         data={{
-          title: imageMovie.title,
-          ratingImdb: imageMovie.ratingImdb,
-          ratingRt: imageMovie.ratingRt,
-          description: imageMovie.description,
-          image: imageMovie.image,
-          alt: imageMovie.alt,
+          title: titleMovie,
+          ratingImdb,
+          ratingRt,
+          description,
+          image: imageMovie,
+          alt: alt,
         }}
-        onChange={(event) => setPagination(event.target.value)}
       />
-
-      {/* {headerMovies.map((item) => (
-          <Wrapper key={item.id}>
-            <MoviesDescription
-              data={{
-                title: item.title,
-                ratingImdb: item.ratingImdb,
-                ratingRt: item.ratingRt,
-                description: item.description,
-                image: item.image,
-                alt: item.alt,
-              }}
-            />
-
-            <PaginationBox
-              onClick={(e) => handleHeaderImages(e.target.value)}
-            />
-          </Wrapper>
-          
-        ))} */}
 
       <Section title="Featured Movie">
         {movies.map((item) => (
@@ -91,7 +77,6 @@ export function Home() {
           />
         ))}
       </Section>
-
       <Section title="New Arrival">
         {newArrivals.map((item) => (
           <Card
@@ -109,7 +94,6 @@ export function Home() {
           />
         ))}
       </Section>
-
       <Section title="Exclusive Videos" isTrailerList>
         {content.map((item) => (
           <VideoCard
@@ -118,7 +102,6 @@ export function Home() {
           />
         ))}
       </Section>
-
       <Section title="Featured Casts">
         {featuredCasts.map((item) => (
           <Card
@@ -131,7 +114,6 @@ export function Home() {
           />
         ))}
       </Section>
-
       <Footer />
     </Container>
   )

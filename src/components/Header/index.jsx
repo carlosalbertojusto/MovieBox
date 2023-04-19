@@ -3,7 +3,7 @@ import { Navigation, MoviesDescription, PaginationBox } from "../index"
 
 export function Header({ image, onClick, data }) {
   return (
-    <Container image={image}>
+    <Container image={image} onClick={onClick}>
       <Navigation />
       <Wrapper>
         <MoviesDescription

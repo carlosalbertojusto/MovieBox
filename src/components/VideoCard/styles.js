@@ -27,7 +27,8 @@ export const Play = styled.div`
   height: 6rem;
   top: 10rem;
   left: 20rem;
-  svg {
+
+  #play {
     stroke: ${({ theme }) => theme.COLORS.WHITE};
     stroke-width: 1;
   }

@@ -1,7 +1,7 @@
 import styled from "styled-components"
 
 export const Container = styled.section`
-  min-width: 126rem;
+  max-width: 100vw;
   display: flex;
   flex-direction: column;
   margin: 0 3.8rem 0 3.4rem;
@@ -30,9 +30,10 @@ export const Movies = styled.div`
 
 export const MovieList = styled.div`
   max-width: 124rem;
-  overflow: scroll;
   display: flex;
   align-items: center;
+
+  overflow: hidden;
 `
 
 export const MovieBox = styled.div`
@@ -42,5 +43,10 @@ export const MovieBox = styled.div`
   svg {
     font-size: 4.8rem;
     stroke: ${({ theme }) => theme.COLORS.GRAY_500};
+
+    &:hover {
+      cursor: pointer;
+      transform: scale(1.1);
+    }
   }
 `
