@@ -26,6 +26,9 @@ export const Movies = styled.div`
   display: flex;
   width: 100%;
   gap: ${({ isTrailerList }) => (isTrailerList ? "4.5rem" : "8rem")};
+  transform: ${(props) => `translateX(-${props.transform * 79}%)`};
+  transition: 700ms ease;
+  scroll-behavior: smooth;
 `
 
 export const MovieList = styled.div`
@@ -33,12 +36,18 @@ export const MovieList = styled.div`
   display: flex;
   align-items: center;
 
-  overflow: hidden;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
 `
 
 export const MovieBox = styled.div`
   display: flex;
   align-items: center;
+
+  button {
+    background: transparent;
+    border: none;
+  }
 
   svg {
     font-size: 4.8rem;

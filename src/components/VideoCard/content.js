@@ -137,6 +137,42 @@ const featuredCasts = [
     image: images.ImageChloe,
     artist: true,
   },
+  {
+    id: 5,
+    title: "Dwayne Johnson",
+    image: images.ImageDwayneTheRock,
+    artist: true,
+  },
+  {
+    id: 6,
+    title: "Scarlett Johansson",
+    image: images.ImageScarlettJohansson,
+    artist: true,
+  },
+  {
+    id: 7,
+    title: "Tom Holland",
+    image: images.ImageTomHolland,
+    artist: true,
+  },
+  {
+    id: 8,
+    title: "Gal Gadot",
+    image: images.ImageGalGadot,
+    artist: true,
+  },
+  {
+    id: 9,
+    title: "Florence Pugh",
+    image: images.ImageFlorencePugh,
+    artist: true,
+  },
+  {
+    id: 10,
+    title: "Benedict Cumberbatch",
+    image: images.ImageBenedictCumberbatch,
+    artist: true,
+  },
 ]
 
 const headerMovies = [
@@ -195,25 +231,31 @@ const headerMovies = [
 const imagesMovies = [
   {
     id: 1,
-    image: images.ImageJohnWick
+    image: images.ImageJohnWick,
   },
   {
     id: 2,
-    image: images.ImageRedNotice
+    image: images.ImageRedNotice,
   },
   {
     id: 3,
-    image: images.ImageBlackWidow
+    image: images.ImageBlackWidow,
   },
   {
     id: 4,
-    image: images.ImageNoWayHome
+    image: images.ImageNoWayHome,
   },
   {
     id: 5,
-    image: images.ImageMatrix
+    image: images.ImageMatrix,
   },
-
 ]
 
-export { content, featuredCasts, newArrivals, movies, headerMovies, imagesMovies }
+export {
+  content,
+  featuredCasts,
+  newArrivals,
+  movies,
+  headerMovies,
+  imagesMovies,
+}

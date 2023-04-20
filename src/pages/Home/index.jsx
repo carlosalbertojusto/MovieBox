@@ -10,7 +10,7 @@ import {
   headerMovies,
 } from "../../components/VideoCard/content"
 
-import { useState, useEffect } from "react"
+import { useState, useEffect, useRef } from "react"
 
 export function Home() {
   const [pagination, setPagination] = useState(1)
@@ -21,6 +21,8 @@ export function Home() {
   const [ratingRt, setRatingRt] = useState("")
   const [description, setDescription] = useState("")
   const [alt, setAlt] = useState("")
+  const [position, setPosition] = useState(0)
+  const carouselRef = useRef(null)
 
   function handleHeaderMovies() {
     if (pagination <= 5) {
@@ -56,11 +58,11 @@ export function Home() {
           ratingRt,
           description,
           image: imageMovie,
-          alt: alt,
+          alt,
         }}
       />
 
-      <Section title="Featured Movie">
+      {/* <Section title="Featured Movie">
         {movies.map((item) => (
           <Card
             key={item.id}
@@ -77,6 +79,7 @@ export function Home() {
           />
         ))}
       </Section>
+
       <Section title="New Arrival">
         {newArrivals.map((item) => (
           <Card
@@ -94,6 +97,7 @@ export function Home() {
           />
         ))}
       </Section>
+
       <Section title="Exclusive Videos" isTrailerList>
         {content.map((item) => (
           <VideoCard
@@ -101,9 +105,10 @@ export function Home() {
             data={{ title: item.title, image: item.image }}
           />
         ))}
-      </Section>
-      <Section title="Featured Casts">
-        {featuredCasts.map((item) => (
+      </Section> */}
+
+      <Section title="Featured Casts" items={featuredCasts} />
+      {/* {featuredCasts.map((item) => (
           <Card
             key={item.id}
             data={{
@@ -113,7 +118,8 @@ export function Home() {
             }}
           />
         ))}
-      </Section>
+      </Section> */}
+
       <Footer />
     </Container>
   )
