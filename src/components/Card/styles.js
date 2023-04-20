@@ -21,13 +21,8 @@ export const ImageContainer = styled.div`
 
     &:hover {
       cursor: pointer;
-      filter: grayscale(0);
       transition: 700ms ease;
       transform: scale(1.1);
-    }
-
-    &:not(:hover) {
-      filter: grayscale(1);
     }
   }
 `

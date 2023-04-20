@@ -62,63 +62,13 @@ export function Home() {
         }}
       />
 
-      {/* <Section title="Featured Movie">
-        {movies.map((item) => (
-          <Card
-            key={item.id}
-            data={{
-              title: item.title,
-              ratingImdb: item.ratingImdb,
-              ratingRt: item.ratingRt,
-              category: item.category,
-              genres: item.genres,
-              releaseInfo: item.releaseInfo,
-              image: item.image,
-              alt: item.alt,
-            }}
-          />
-        ))}
-      </Section>
+      <Section title="Featured Movie" items={movies} />
 
-      <Section title="New Arrival">
-        {newArrivals.map((item) => (
-          <Card
-            key={item.id}
-            data={{
-              title: item.title,
-              ratingImdb: item.ratingImdb,
-              ratingRt: item.ratingRt,
-              category: item.category,
-              genres: item.genres,
-              releaseInfo: item.releaseInfo,
-              image: item.image,
-              alt: item.alt,
-            }}
-          />
-        ))}
-      </Section>
+      <Section title="New Arrival" items={newArrivals} />
 
-      <Section title="Exclusive Videos" isTrailerList>
-        {content.map((item) => (
-          <VideoCard
-            key={item.id}
-            data={{ title: item.title, image: item.image }}
-          />
-        ))}
-      </Section> */}
+      <Section title="Exclusive Videos" isTrailerList items={content} />
 
       <Section title="Featured Casts" items={featuredCasts} />
-      {/* {featuredCasts.map((item) => (
-          <Card
-            key={item.id}
-            data={{
-              title: item.title,
-              image: item.image,
-              artist: item.artist,
-            }}
-          />
-        ))}
-      </Section> */}
 
       <Footer />
     </Container>

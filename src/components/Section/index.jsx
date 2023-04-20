@@ -2,7 +2,7 @@ import { Container, Title, Movies, MovieList, MovieBox } from "./styles"
 import { FiChevronLeft, FiChevronRight } from "react-icons/fi"
 import { useState } from "react"
 
-import { Link, Card } from "../index"
+import { Link, Card, VideoCard } from "../index"
 
 export function Section({ title, isTrailerList = false, items }) {
   const [position, setPosition] = useState(0)
@@ -26,22 +26,33 @@ export function Section({ title, isTrailerList = false, items }) {
 
         <MovieList>
           <Movies transform={position} isTrailerList={isTrailerList}>
-            {items.map((item) => (
-              <Card
-                key={item.id}
-                data={{
-                  title: item.title,
-                  ratingImdb: item.ratingImdb,
-                  ratingRt: item.ratingRt,
-                  category: item.category,
-                  genres: item.genres,
-                  releaseInfo: item.releaseInfo,
-                  image: item.image,
-                  alt: item.alt,
-                  artist: item.artist,
-                }}
-              />
-            ))}
+            {items.map((item) =>
+              !isTrailerList ? (
+                <Card
+                  key={item.id}
+                  data={{
+                    title: item.title,
+                    ratingImdb: item.ratingImdb,
+                    ratingRt: item.ratingRt,
+                    category: item.category,
+                    genres: item.genres,
+                    releaseInfo: item.releaseInfo,
+                    image: item.image,
+                    alt: item.alt,
+                    artist: item.artist,
+                  }}
+                />
+              ) : (
+                <VideoCard
+                  key={item.id}
+                  isTrailerList
+                  data={{
+                    title: item.title,
+                    image: item.image,
+                  }}
+                />
+              )
+            )}
           </Movies>
         </MovieList>
 
