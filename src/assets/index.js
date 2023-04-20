@@ -21,6 +21,12 @@ import ImageBlackWidow from "./blackWidow.png"
 import ImageMatrix from "./matrix.png"
 import ImageRedNotice from "./rednotice.png"
 import ImageNoWayHome from "./spidermanNoWayHome.jpg"
+import ImageDwayneTheRock from "./dwaynejohnson.png"
+import ImageGalGadot from "./galGadot.png"
+import ImageScarlettJohansson from "./scarlettJohansson.png"
+import ImageTomHolland from "./tomHolland.png"
+import ImageFlorencePugh from "./florencepugh.png"
+import ImageBenedictCumberbatch from "./benedictCumberbatch.png"
 
 export const images = {
   ImageBatman,
@@ -45,5 +51,11 @@ export const images = {
   ImageNoWayHome,
   ImageBlackWidow,
   ImageMatrix,
-  ImageRedNotice
+  ImageRedNotice,
+  ImageDwayneTheRock,
+  ImageGalGadot,
+  ImageScarlettJohansson,
+  ImageTomHolland,
+  ImageFlorencePugh,
+  ImageBenedictCumberbatch,
 }

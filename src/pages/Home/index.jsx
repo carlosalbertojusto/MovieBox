@@ -10,7 +10,7 @@ import {
   headerMovies,
 } from "../../components/VideoCard/content"
 
-import { useState, useEffect } from "react"
+import { useState, useEffect, useRef } from "react"
 
 export function Home() {
   const [pagination, setPagination] = useState(1)
@@ -21,6 +21,8 @@ export function Home() {
   const [ratingRt, setRatingRt] = useState("")
   const [description, setDescription] = useState("")
   const [alt, setAlt] = useState("")
+  const [position, setPosition] = useState(0)
+  const carouselRef = useRef(null)
 
   function handleHeaderMovies() {
     if (pagination <= 5) {
@@ -56,64 +58,18 @@ export function Home() {
           ratingRt,
           description,
           image: imageMovie,
-          alt: alt,
+          alt,
         }}
       />
 
-      <Section title="Featured Movie">
-        {movies.map((item) => (
-          <Card
-            key={item.id}
-            data={{
-              title: item.title,
-              ratingImdb: item.ratingImdb,
-              ratingRt: item.ratingRt,
-              category: item.category,
-              genres: item.genres,
-              releaseInfo: item.releaseInfo,
-              image: item.image,
-              alt: item.alt,
-            }}
-          />
-        ))}
-      </Section>
-      <Section title="New Arrival">
-        {newArrivals.map((item) => (
-          <Card
-            key={item.id}
-            data={{
-              title: item.title,
-              ratingImdb: item.ratingImdb,
-              ratingRt: item.ratingRt,
-              category: item.category,
-              genres: item.genres,
-              releaseInfo: item.releaseInfo,
-              image: item.image,
-              alt: item.alt,
-            }}
-          />
-        ))}
-      </Section>
-      <Section title="Exclusive Videos" isTrailerList>
-        {content.map((item) => (
-          <VideoCard
-            key={item.id}
-            data={{ title: item.title, image: item.image }}
-          />
-        ))}
-      </Section>
-      <Section title="Featured Casts">
-        {featuredCasts.map((item) => (
-          <Card
-            key={item.id}
-            data={{
-              title: item.title,
-              image: item.image,
-              artist: item.artist,
-            }}
-          />
-        ))}
-      </Section>
+      <Section title="Featured Movie" items={movies} />
+
+      <Section title="New Arrival" items={newArrivals} />
+
+      <Section title="Exclusive Videos" isTrailerList items={content} />
+
+      <Section title="Featured Casts" items={featuredCasts} />
+
       <Footer />
     </Container>
   )
