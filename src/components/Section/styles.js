@@ -26,7 +26,7 @@ export const Title = styled.div`
 export const Movies = styled.div`
   display: flex;
   width: 100%;
-  height: 51rem;
+  height: ${({ isTrailerList }) => (isTrailerList ? "30rem" : "51rem")};
   gap: ${({ isTrailerList }) => (isTrailerList ? "4.5rem" : "8rem")};
   transform: ${(props) => `translateX(-${props.transform * 79}%)`};
   transition: 700ms ease;
